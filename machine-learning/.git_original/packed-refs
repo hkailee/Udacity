@@ -1,0 +1,7 @@
+# pack-refs with: peeled fully-peeled 
+00bcdc9d01914f0240d1b29cc744f575a01cd036 refs/remotes/origin/development
+b69ebce8e2645820ef8e0d38ece7306ed7c289b6 refs/remotes/origin/master
+eee401f03d00e9caf3946b68e644ef836e1b7bb7 refs/remotes/origin/nicky/remove-log-ignore
+2be27d3631d5e41c852cf7779c345a911a561d5c refs/remotes/origin/revert-170-master
+dc457e4606a0a272fae28af70e078b01c89b07cb refs/remotes/origin/smartcab-fix
+78993784bf3b628e5aca0bc2ea499b50ba8d1ad6 refs/remotes/origin/test_normalize
