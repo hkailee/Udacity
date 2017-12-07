@@ -86,6 +86,8 @@ def ModelComplexity(X, y):
     train_std = np.std(train_scores, axis=1)
     test_mean = np.mean(test_scores, axis=1)
     test_std = np.std(test_scores, axis=1)
+    print("train_std=", train_std)
+    print("test_std=", test_std)
 
     # Plot the validation curve
     pl.figure(figsize=(7, 5))
@@ -124,7 +126,7 @@ def PredictTrials(X, y, fitter, data):
         prices.append(pred)
         
         # Result
-        print "Trial {}: ${:,.2f}".format(k+1, pred)
+        print ("Trial {}: ${:,.2f}".format(k+1, pred))
 
     # Display price range
-    print "\nRange in prices: ${:,.2f}".format(max(prices) - min(prices))
+    print ("\nRange in prices: ${:,.2f}".format(max(prices) - min(prices)))
