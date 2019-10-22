@@ -4,6 +4,7 @@ This is a master repository containing projects of NanoDegree Programs that I ha
 
 1. AI in Trading NanoDegree
 2. Machine Learning Engineer NanoDegree
+3. Deep Learning NanoDegree - Under Facebook-awarded Scholarship
 
 
 
