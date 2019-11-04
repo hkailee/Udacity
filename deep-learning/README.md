@@ -10,7 +10,7 @@ This repository contains code for Udacity's [Deep Learning NanoDegree](https://w
     .
     ├── projects/                    # Code for projects in the classroom
     ├── README.MD                   # README doc
-    └── deep-learning-v2-pytorch    # mini-projects and projects used in class. Available for download at [Udacity GitHub portal](https://github.com/udacity/deep-learning-v2-pytorch)
+    └── deep-learning-v2-pytorch    # mini-projects and projects used in class. Available for download at https://github.com/udacity/deep-learning-v2-pytorch
 
 ## No Data
 No data available due to licensing issue
