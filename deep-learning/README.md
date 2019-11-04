@@ -6,7 +6,7 @@ This repository contains code for Udacity's [Deep Learning NanoDegree](https://w
 2. Dog-Breed Classifier (covered convolutional network and transfer learning) - Completed on Oct 21, 2019
 3. TV Script Generation (covered LSTM RNN network with embeddings)
 
-## Example Repository File StrSmart_Beta_Portfolio_and_Portfolio structure
+## Repository File structure
     .
     ├── projects/                    # Code for projects in the classroom
     ├── README.MD                   # README doc
