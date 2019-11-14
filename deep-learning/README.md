@@ -4,13 +4,10 @@ This repository contains code for Udacity's [Deep Learning NanoDegree](https://w
 ## Projects covered
 1. Predicting Bike-sharing Patterns (covered basic neural network)- Completed on Sep 16, 2019
 2. Dog-Breed Classifier (covered convolutional network and transfer learning) - Completed on Oct 21, 2019
-<<<<<<< HEAD
 3. TV Script Generation (covered LSTM RNN network with embeddings) - Completed on 4 Nov, 2019 
 4. 
 5. Deploying A Sentimental Analysis Model (covered LSTM embedding on Amazon Sagemaker) -   
-=======
-3. TV Script Generation (covered LSTM RNN network with embeddings) - Completed on 4 Nov, 2019  
->>>>>>> dc3fe995477936b7772c60810d679cf1de847f4e
+
 
 ## Repository File structure
     .
