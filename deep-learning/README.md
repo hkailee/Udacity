@@ -6,8 +6,12 @@ This repository contains code for Udacity's [Deep Learning NanoDegree](https://w
 2. Dog-Breed Classifier (covered convolutional network and transfer learning) - Completed on Oct 21, 2019
 3. TV Script Generation (covered LSTM RNN network with embeddings) - Completed on 4 Nov, 2019 
 4. Face Generation (covered dcGAN) - Completed on 18 Nov, 2019
+<<<<<<< HEAD
 5. Deploying A Sentimental Analysis Model (covered LSTM embedding on Amazon Sagemaker) - Completed on 15 Nov, 2019
 6. Other mini projects 
+=======
+5. Deploying A Sentimental Analysis Model (covered LSTM embedding on Amazon Sagemaker) - Completed on 15 Nov, 2019  
+>>>>>>> origin/master
 
 
 ## Repository File structure
