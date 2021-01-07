@@ -1,7 +1,7 @@
 from keras import backend as K
 from keras.models import Model
 from keras.layers import (BatchNormalization, Conv2D, Dense, Input, 
-    TimeDistributed, Activation, Bidirectional, SimpleRNN, GRU, LSTM, Dropout, Reshape)
+    TimeDistributed, Activation, Bidirectional, SimpleRNN, GRU, LSTM, Dropout, Reshape, MaxPooling2D, Flatten)
 
 def simple_rnn_model(input_dim, output_dim=29):
     """ Build a recurrent network for speech 
@@ -157,14 +157,17 @@ def final_model(input_dim=161,
     # Add convolutional layer
     input_shape = (13, 13, 1)
     input_data = Reshape((13, 13, 1))(input_data)
-    conv_2d = Conv2D(filters, kernel_size, 
+    conv_2d_1 = Conv2D(filters, kernel_size, 
                      strides=conv_stride, 
                      input_shape=input_shape,
                      padding=conv_border_mode,
                      activation=activation,
                      name='conv2d')(input_data)
-    # Add batch normalization
-    bn_cnn = BatchNormalization(name='bn_conv_2d')(conv_2d)
+    pool_1 = MaxPooling2D(pool_size=(2, 2))(conv_2d_1)
+    
+    # Add batch normalization and 
+    bn_cnn = BatchNormalization(name='bn_pool_1')(pool_1)
+    flat = Flatten()(bn_cnn)
     
     for layer in range(recur_layers):
         if layer == 0:
@@ -172,17 +175,17 @@ def final_model(input_dim=161,
                                            return_sequences=True, implementation=2, 
                                            name='rnn'+str(layer), 
                                            dropout_U=dropout_rate), 
-                                       merge_mode='concat')(bn_cnn)
+                                       merge_mode='concat')(flat)
             bn_rnn = BatchNormalization()(simple_rnn)
-            drop_out_rnn = Dropout(rate=dropout_rate)(bn_rnn)
+            drop_out_rnn = Dropout(rate=dropout_rate)(flat)
         else:
             simple_rnn = Bidirectional(GRU(units, activation=activation,
                                            return_sequences=True, implementation=2, 
                                            name='rnn'+str(layer), 
                                            dropout_U=dropout_rate), 
-                                       merge_mode='concat')(bn_cnn)
+                                       merge_mode='concat')(flat)
             bn_rnn = BatchNormalization()(simple_rnn)
-            drop_out_rnn = Dropout(rate=dropout_rate)(bn_rnn)
+            drop_out_rnn = Dropout(rate=dropout_rate)(flat)
                     
     # Add a TimeDistributed(Dense(output_dim)) layer
     time_dense = TimeDistributed(Dense(output_dim))(drop_out_rnn)        
