@@ -10,7 +10,7 @@ This repository contains code for Udacity's [Natural Language Processing NanoDeg
     .
     ├── projects/        # Code for projects in the classroom
     ├── README.MD        # README doc
-    └── mini-projects    # mini-projects and projects used in class. 
+    └── mini_projects    # mini-projects and projects used in class. 
 
 ## No Data
 No data available due to licensing issue
