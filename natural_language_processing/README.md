@@ -4,6 +4,7 @@ This repository contains code for Udacity's [Natural Language Processing NanoDeg
 ## Projects covered
 1. Part of Speech Tagging with Hidden Markov Models - Completed on December 2, 2020
 2. NLP Machine Translation with GRU, embedding, bidirectional, and/or encoder/decoder in Keras - Completed on December 29, 2020
+3. VUI Speech Recogntion with Conv1D, GRU birectional RNN, and TimeDistributed layer - Completed on January 8, 2020. 
 
 ## Repository File structure
     .
