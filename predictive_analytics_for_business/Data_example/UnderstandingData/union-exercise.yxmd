@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="10.5">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="StreamNumber" />
+            <Field name="lastName" />
+            <Field name="firstName" />
+            <Field name="ID" />
+          </Fields>
+          <Data>
+            <r>
+              <c>2</c>
+              <c>Louis</c>
+              <c>Pasteur</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>Alexander</c>
+              <c>Bell</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>Alfred</c>
+              <c>Nobel</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>Henry</c>
+              <c>Ford</c>
+              <c>8</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="1">
+          <Name />
+          <AnnotationText><![CDATA[Stream2 - More Names and IDs, in a different order ]]></AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="4" />
+          <Fields>
+            <Field name="StreamNumber" />
+            <Field name="ID" />
+            <Field name="firstName" />
+            <Field name="lastName" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>1</c>
+              <c>Tim</c>
+              <c>Berners-Lee</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>2</c>
+              <c>Isaac</c>
+              <c>Newton</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>3</c>
+              <c>Benjamin</c>
+              <c>Franklin</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>4</c>
+              <c>Thomas</c>
+              <c>Edison</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="1">
+          <Name />
+          <AnnotationText>Stream1- Names and IDs</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+  </Nodes>
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Union exercise</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>p1-customers.xlsx
+Table=`p1-customers$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Name" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="V_String" />
+            <Field name="Customer_Segment" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="V_String" />
+            <Field name="Customer_ID" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="Double" />
+            <Field name="Address" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="V_String" />
+            <Field name="City" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="V_String" />
+            <Field name="State" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="V_String" />
+            <Field name="ZIP" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="Double" />
+            <Field name="Avg_Sale_Amount" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="Double" />
+            <Field name="Store_Number" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="Double" />
+            <Field name="Responded_to_Last_Catalog" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="V_String" />
+            <Field name="Avg_Num_Products_Purchased" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="Double" />
+            <Field name="#_Years_as_Customer" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-customers.xlsx|||`p1-customers$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="Linear_Regression">
+        <Position x="222" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Home</Value>
+          <Value name="curTab">advanced</Value>
+          <Value name="standardize_pred">True</Value>
+          <Value name="internal_cv">True</Value>
+          <Value name="display_graphs">True</Value>
+          <Value name="set_seed_internal_cv">True</Value>
+          <Value name="set_seed_external_cv">True</Value>
+          <Value name="lambda_1se">True</Value>
+          <Value name="lambda_min">False</Value>
+          <Value name="Model Name">Linear_Regressio</Value>
+          <Value name="Y Var">Avg_Sale_Amount</Value>
+          <Value name="X Vars">Customer_Segment,Avg_Num_Products_Purchased</Value>
+          <Value name="Omit Constant">False</Value>
+          <Value name="Use Weights">False</Value>
+          <Value name="Weight Vec" />
+          <Value name="regularization">False</Value>
+          <Value name="alpha">0.5</Value>
+          <Value name="nfolds">5</Value>
+          <Value name="lambda">lambda_1se</Value>
+          <Value name="seed_internal_cv">1</Value>
+          <Value name="lambda_no_cv">0.5</Value>
+          <Value name="external_cv">False</Value>
+          <Value name="nfolds_external">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="external_seed_value">1</Value>
+          <Value name="graph.resolution">1x</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Linear_Regressio</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="354" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\leeho\AppData\Local\Temp\Engine_376_2005a369d0d7483d962ff283a3e598e4_\Engine_2576_9f31e10343b74c10a1be294f8cee0f33_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="138" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>p1-mailinglist.xlsx
+Table=`p1-mailinglist$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Name" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="V_String" />
+            <Field name="Customer_Segment" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="V_String" />
+            <Field name="Customer_ID" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+            <Field name="Address" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="V_String" />
+            <Field name="City" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="V_String" />
+            <Field name="State" size="255" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="V_String" />
+            <Field name="ZIP" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+            <Field name="Store_Number" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+            <Field name="Avg_Num_Products_Purchased" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+            <Field name="#_Years_as_Customer" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+            <Field name="Score_No" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+            <Field name="Score_Yes" source="File: Z:\predictive_analytics_for_business\projects\predicting_catalog_demands\All_P1_Files\p1-mailinglist.xlsx|||`p1-mailinglist$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="Score">
+        <Position x="306" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="modelChoice">Local Model</Value>
+          <Value name="score field">pred_avg_sales_amount</Value>
+          <Value name="is oversampled">False</Value>
+          <Value name="oversampled value">
+          </Value>
+          <Value name="original percent">2</Value>
+          <Value name="log y">False</Value>
+          <Value name="prediction.interval">False</Value>
+          <Value name="interval.level">95</Value>
+          <Value name="append.xdf">False</Value>
+          <Value name="num.records">256000</Value>
+          <Value name="credentials">
+          </Value>
+          <Value name="models">
+          </Value>
+          <Value name="page">
+          </Value>
+          <Value name="errorStatus">
+          </Value>
+          <Value name="modelDetailJSON">
+          </Value>
+          <Value name="modelDetails">{"Name":"","Owner":"","Status":"","Id":"","LastDeployment":"","LastUpdated":"","LatestVersion":"","ActiveVersion":"","NumReplications":"","NumVersions":""}</Value>
+          <Value name="promoteURL">
+          </Value>
+          <Value name="username">
+          </Value>
+          <Value name="model_name">
+          </Value>
+          <Value name="model_owner">
+          </Value>
+          <Value name="apiKey">
+          </Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Score\Supporting_Macros\score-engine.yxmc" EngineDll="Macro" EngineDllEntryPoint="Score\Supporting_Macros\score-engine.yxmc" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="546" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="expected_revenue" action="Sum" rename="Sum_expected_revenue" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="618" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Sum_expected_revenue]*0.5-250*6.5" field="Net_Profit" size="4" type="Float" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Net_Profit = [Sum_expected_revenue]*0.5-250*6.5
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="378" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Score_Yes]*[pred_avg_sales_amount]" field="expected_revenue" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[expected_revenue = [Score_Yes]*[pred_avg_sales_amount]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="462" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="expected_revenue" selected="True" type="Float" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings>
+        <Position x="198" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="x var">Avg_Num_Products_Purchased</Value>
+          <Value name="y var">Avg_Sale_Amount</Value>
+          <Value name="y binary">False</Value>
+          <Value name="y level" />
+          <Value name="reg line">True</Value>
+          <Value name="smooth line">True</Value>
+          <Value name="smooth span">50</Value>
+          <Value name="spread">True</Value>
+          <Value name="boxplots">True</Value>
+          <Value name="jitter x">False</Value>
+          <Value name="jitter y">False</Value>
+          <Value name="log x">False</Value>
+          <Value name="log y">False</Value>
+          <Value name="groups">False</Value>
+          <Value name="group var">Name</Value>
+          <Value name="group lines">False</Value>
+          <Value name="default">True</Value>
+          <Value name="topleft">False</Value>
+          <Value name="topright">False</Value>
+          <Value name="bottomleft">False</Value>
+          <Value name="bottomright">False</Value>
+          <Value name="x label" />
+          <Value name="y label" />
+          <Value name="pointsize">10</Value>
+          <Value name="point size">1.0</Value>
+          <Value name="axis text size">1.2</Value>
+          <Value name="axis label size">1.3</Value>
+          <Value name="title size">1.4</Value>
+          <Value name="inches">True</Value>
+          <Value name="in.w">5.50</Value>
+          <Value name="in.h">5.50</Value>
+          <Value name="centimeters">False</Value>
+          <Value name="cm.w">13.00</Value>
+          <Value name="cm.h">14.95</Value>
+          <Value name="graph.resolution">1x</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Scatterplot.yxmc" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="294" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\leeho\AppData\Local\Temp\Engine_376_2005a369d0d7483d962ff283a3e598e4_\Engine_2576_713fc070ebd04cc1927996eb3e99e99f_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="14" Connection="Data Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Reports" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Model" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="9" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Scater Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Alteryx_workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
