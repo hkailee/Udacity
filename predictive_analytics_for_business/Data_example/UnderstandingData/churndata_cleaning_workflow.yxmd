@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">Z:\predictive_analytics_for_business\Data_example\UnderstandingData\churndata.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>churndata.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="state" size="2" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="String" />
+            <Field name="account length" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Int32" />
+            <Field name="area code" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Int16" />
+            <Field name="phone number" size="8" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="String" />
+            <Field name="international plan" size="5" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="String" />
+            <Field name="voice mail plan" size="5" source="Formula: IF IsNULL([Right_voice mail plan])&#xA;THEN [voice mail plan]&#xA;ELSE [Right_voice mail plan]&#xA;ENDIF" type="String" />
+            <Field name="number vmail messages" source="Formula: IF [number vmail messages]=0&#xA;THEN null()&#xA;ELSE [number vmail messages]&#xA;ENDIF" type="Int32" />
+            <Field name="total day minutes" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total day calls" source="Formula: IF [total day calls]&lt;102 &amp;&amp; [total day calls]&gt;100&#xA;THEN null()&#xA;ELSE [total day calls]&#xA;ENDIF" type="Int32" />
+            <Field name="total day charge" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total eve minutes" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total eve calls" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Int32" />
+            <Field name="total eve charge" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total night minutes" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total night calls" source="Formula: IF [total day calls]&lt;102 &amp;&amp; [total day calls]&gt;100&#xA;THEN null()&#xA;ELSE [total day calls]&#xA;ENDIF" type="Int32" />
+            <Field name="total night charge" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total intl minutes" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="total intl calls" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Int32" />
+            <Field name="total intl charge" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Double" />
+            <Field name="number customer service calls" source="File: C:\Users\bburkholder\Documents\Internal\Udacity\ChurnData.txt" type="Int32" />
+            <Field name="Churn" size="6" source="Formula: Replace([Churn],'.','')" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="114" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="state" action="CountNull" rename="CountNull_state" />
+            <SummarizeField field="account length" action="CountNull" rename="CountNull_account length" />
+            <SummarizeField field="area code" action="CountNull" rename="CountNull_area code" />
+            <SummarizeField field="phone number" action="CountNull" rename="CountNull_phone number" />
+            <SummarizeField field="international plan" action="CountNull" rename="CountNull_international plan" />
+            <SummarizeField field="voice mail plan" action="CountNull" rename="CountNull_voice mail plan" />
+            <SummarizeField field="number vmail messages" action="CountNull" rename="CountNull_number vmail messages" />
+            <SummarizeField field="total day minutes" action="CountNull" rename="CountNull_total day minutes" />
+            <SummarizeField field="total day calls" action="CountNull" rename="CountNull_total day calls" />
+            <SummarizeField field="total day charge" action="CountNull" rename="CountNull_total day charge" />
+            <SummarizeField field="total eve minutes" action="CountNull" rename="CountNull_total eve minutes" />
+            <SummarizeField field="total eve calls" action="CountNull" rename="CountNull_total eve calls" />
+            <SummarizeField field="total eve charge" action="CountNull" rename="CountNull_total eve charge" />
+            <SummarizeField field="total night minutes" action="CountNull" rename="CountNull_total night minutes" />
+            <SummarizeField field="total night calls" action="CountNull" rename="CountNull_total night calls" />
+            <SummarizeField field="total night charge" action="CountNull" rename="CountNull_total night charge" />
+            <SummarizeField field="total intl minutes" action="CountNull" rename="CountNull_total intl minutes" />
+            <SummarizeField field="total intl calls" action="CountNull" rename="CountNull_total intl calls" />
+            <SummarizeField field="total intl charge" action="CountNull" rename="CountNull_total intl charge" />
+            <SummarizeField field="number customer service calls" action="CountNull" rename="CountNull_number customer service calls" />
+            <SummarizeField field="Churn" action="CountNull" rename="CountNull_Churn" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="210" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\leeho\AppData\Local\Temp\Engine_5656_731bcda026354bee979e3766dec29868_\Engine_4568_50e3e15ab3c44ec284a3b5c6c7623026_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="318" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Select Fields" />
+          <Value name="Sample Data">False</Value>
+          <Value name="Number">True</Value>
+          <Value name="NNumber">5000</Value>
+          <Value name="Percent">False</Value>
+          <Value name="NPercent">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="414" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\leeho\AppData\Local\Temp\Engine_5656_731bcda026354bee979e3766dec29868_\Engine_4568_cb0c1a8d07094381b1589274d504f6ba_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="102" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="number vmail messages" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="198" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([total day calls]) AND !IsNull([total eve calls])</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>
+            </Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2021-04-26 08:24:46</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2021-04-26 08:24:46</StartDate>
+              <EndDate>2021-04-26 08:24:46</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([total day calls]) AND !IsNull([total eve calls])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings>
+        <Position x="318" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="FrequencyFields">&lt;Field field="Churn" selected="True" /&gt;&lt;Field field="*Unknown" selected="False" /&gt;</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Frequency.yxmc" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="414" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\leeho\AppData\Local\Temp\Engine_5656_731bcda026354bee979e3766dec29868_\Engine_4568_6235db78e34f4fa9ab5679429db3a86f_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Interactive" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="4" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Interactive" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>churndata_cleaning_workflow</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
