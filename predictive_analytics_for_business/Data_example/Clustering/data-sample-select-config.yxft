@@ -1,0 +1,63 @@
+<YXFT>
+  <fields>
+    <field name="StoreID" type="V_String" size="254" description="" />
+    <field name="City" type="V_String" size="254" description="" />
+    <field name="State" type="V_String" size="254" description="" />
+    <field name="Date Last Winter Freeze" type="Date" size="10" description="" />
+    <field name="Date First Winter Freeze" type="Date" size="10" description="" />
+    <field name="Growing Season Length" type="Int32" size="4" description="" />
+    <field name="Precip Jan" type="Float" size="4" description="" />
+    <field name="Precip Feb" type="Float" size="4" description="" />
+    <field name="Precip Mar" type="Float" size="4" description="" />
+    <field name="Precip Apr" type="Float" size="4" description="" />
+    <field name="Precip May" type="Float" size="4" description="" />
+    <field name="Precip Jun" type="Float" size="4" description="" />
+    <field name="Precip Jul" type="Float" size="4" description="" />
+    <field name="Precip Aug" type="Float" size="4" description="" />
+    <field name="Precip Sep" type="Float" size="4" description="" />
+    <field name="Precip Oct" type="Float" size="4" description="" />
+    <field name="Precip Nov" type="Float" size="4" description="" />
+    <field name="Precip Dec" type="Float" size="4" description="" />
+    <field name="Rain Jan" type="Float" size="4" description="" />
+    <field name="Rain Feb" type="Float" size="4" description="" />
+    <field name="Rain Mar" type="Float" size="4" description="" />
+    <field name="Rain Apr" type="Float" size="4" description="" />
+    <field name="Rain May" type="Float" size="4" description="" />
+    <field name="Rain Jun" type="Float" size="4" description="" />
+    <field name="Rain Jul" type="Float" size="4" description="" />
+    <field name="Rain Aug" type="Float" size="4" description="" />
+    <field name="Rain Sep" type="Float" size="4" description="" />
+    <field name="Rain Oct" type="Float" size="4" description="" />
+    <field name="Rain Nov" type="Float" size="4" description="" />
+    <field name="Rain Dec" type="Float" size="4" description="" />
+    <field name="Snow Jan" type="Float" size="4" description="" />
+    <field name="Snow Feb" type="Float" size="4" description="" />
+    <field name="Snow Mar" type="Float" size="4" description="" />
+    <field name="Snow Apr" type="Float" size="4" description="" />
+    <field name="Snow May" type="Float" size="4" description="" />
+    <field name="Snow Jun" type="Float" size="4" description="" />
+    <field name="Snow Jul" type="Float" size="4" description="" />
+    <field name="Snow Aug" type="Float" size="4" description="" />
+    <field name="Snow Sep" type="Float" size="4" description="" />
+    <field name="Snow Oct" type="Float" size="4" description="" />
+    <field name="Snow Nov" type="Float" size="4" description="" />
+    <field name="Snow Dec" type="Float" size="4" description="" />
+    <field name="Temp Jan" type="Float" size="4" description="" />
+    <field name="Temp Feb" type="Float" size="4" description="" />
+    <field name="Temp Mar" type="Float" size="4" description="" />
+    <field name="Temp Apr" type="Float" size="4" description="" />
+    <field name="Temp May" type="Float" size="4" description="" />
+    <field name="Temp Jun" type="Float" size="4" description="" />
+    <field name="Temp Jul" type="Float" size="4" description="" />
+    <field name="Temp Aug" type="Float" size="4" description="" />
+    <field name="Temp Sep" type="Float" size="4" description="" />
+    <field name="Temp Oct" type="Float" size="4" description="" />
+    <field name="Temp Nov" type="Float" size="4" description="" />
+    <field name="Temp Dec" type="Float" size="4" description="" />
+    <field name="Elevation" type="Float" size="4" description="" />
+    <field name="Longitude" type="Double" size="8" description="" />
+    <field name="Latitude" type="Double" size="8" description="" />
+    <field name="LastWinterFreezeDiff" type="Int32" size="4" description="" />
+    <field name="FirstWinterFreezeDiff" type="Int32" size="4" description="" />
+  </fields>
+</YXFT>
