@@ -1,6 +1,6 @@
 alphalens==0.3.2
 colour==0.1.5
-numpy==1.16.1
+numpy==1.22.0
 cvxpy==1.0.3
 cycler==0.10.0
 pandas==0.18.1
